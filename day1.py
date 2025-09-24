@@ -41,4 +41,12 @@ def calculator():
                 print(f"{num1} * {num2} = {multiply(num1, num2)}")
             elif choice == '4':
                 print(f"{num1} / {num2} = {divide(num1, num2)}")
-                
+            
+        # option to exit the loop:
+        next_calculation = input("Do you want to perform another calculation? (yes/no): ")
+        if next_calculation.lower() != "yes":
+            break
+    print("Exiting calculator, chao!")
+
+# Call the calculator function:
+calculator()
