@@ -25,3 +25,29 @@ test_labels = to_categorical(test_labels)
 
 # Build the cnn model:
 model = models.Sequential()
+
+# First convolutional layer:
+model.add(layers.Conv2D(32, (3,3) activation ='relu' , input_shape=(28,28,1)))
+model.add(layers.MaxPooling2D((2,2)))
+
+# Second convolutional layer:
+model.add(layers.Conv2D(64, (3,3), activation='relu'))
+model.add(layers.MaxPooling2D((2,2)))
+
+#third Convolutional layer
+model.add(layers.Conv2D(64, (3,3) activation='relu'))
+
+# Flatten the 3D output to 1D and add a dense layer:
+model.add(layers.Flatten())
+models.add(layers.Dense(64, activation='relu'))
+
+
+# Output layer with 10 neurons (for 10 digits classes)
+model.add(layers.Dense(10, activation='softmax'))
+
+# Compile
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+
+# Train the Model:
+model.fit(train_images, train_labels, epochs=5, batch_size=64, validation_data=(test_images, test_labels))
