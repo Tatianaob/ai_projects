@@ -1,0 +1,3 @@
+AI Development Bootcamp – 30-Day Projects
+
+This repository contains 30 hands-on AI projects to strength Python, learn machine learning, and AI concepts incrementally. I started with a basic calculator and gradually will progress to projects covering natural language processing, image classification, recommendation systems, predictive modeling, neural networks, game AI, and anomaly detection. By completing these projects, I build a practical AI portfolio, gain hands-on experience with real-world datasets, and develop skills that I can apply in data science, software development, and AI-focused roles.
