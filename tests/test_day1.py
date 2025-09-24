@@ -28,7 +28,8 @@
 
 
 #pytest:
-import day1
+import pytest
+import src.day1 as day1
 
 def test_add():
     assert day1.add(2, 3) == 5
