@@ -1,0 +1,31 @@
+# Function to add two numbers
+def add(x, y):
+    return x + y
+
+# Function to substract two numbers
+def substract(x, y):
+    return x - y
+
+# Function to multiply two numbers
+def multiply(x , y ):
+    return x * y
+
+# Function to divide two numbers
+def divide(x, y):
+    if y == 0:
+        return "Error! Division by zero not allowed"
+    else:
+        return x / y
+    
+def calculator():
+    print("Select operation:")
+    print("1. Add")
+    print("2. Substract")
+    print("3. Multiply")
+    print("4. Divide")
+
+    while True:
+        # Take input from the user:
+        choice = input("Enter choices: 1,2,3,4: ")
+
+        #
