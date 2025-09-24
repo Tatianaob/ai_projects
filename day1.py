@@ -28,4 +28,17 @@ def calculator():
         # Take input from the user:
         choice = input("Enter choices: 1,2,3,4: ")
 
-        #
+        # Check if the input is one of the four options:
+        if choice in ["1", "2", "3", "4"]:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter your second number: "))
+
+            if choice == '1':
+                print(f"{num1} + {num2} = {add(num1, num2)}")
+            elif choice == '2':
+                print(f"{num1} - {num2} = {substract(num1, num2)}")
+            elif choice == '3':
+                print(f"{num1} * {num2} = {multiply(num1, num2)}")
+            elif choice == '4':
+                print(f"{num1} / {num2} = {divide(num1, num2)}")
+                
