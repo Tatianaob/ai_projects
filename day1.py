@@ -48,5 +48,8 @@ def calculator():
             break
     print("Exiting calculator, chao!")
 
-# Call the calculator function:
-calculator()
+# # Call the calculator function:
+# calculator()
+
+if __name__ == "__main__":
+    calculator()
