@@ -1,9 +1,17 @@
+# This script builds, trains, and evaluates a Convolutional Neural Network (CNN)
+#  on the MNIST dataset (handwritten digit images 0–9).
+
+# It goes through the whole ML pipeline: data loading → preprocessing → model building → 
+# training → evaluation → prediction → visualization.
+
+
+
 # Import necessary libraries: 
-import numpy as np
-import tensorflow as tf
+import numpy as np #math and array operations
+import tensorflow as tf    # deep learning
 from keras import datasets, layers, models
 from keras.utils import to_categorical
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt     #for plotting images and results
 
 # Load the MNIST dataset
 (train_images, train_labels), (test_images, test_labels) = datasets.mnist.load_data()
