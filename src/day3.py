@@ -2,7 +2,6 @@
 import re
 
 # a dict that maps keywords to predefined responses
-
 responses = {
     "Hello": "Hi there, how can I assist you today?" ,
     "Hola": "Hola como estas? En que puedo aydudarte?",
@@ -13,3 +12,14 @@ responses = {
     "Thank you": "You are welcome!",
     "default": " I am not sure I understand, please rephrase"
 }
+# Function to find the appropriate response based on the user's input
+
+def chatbot_response(user_input):
+    # convert user input to lowercasse to match case-sensitive
+    user_input = user_input.lower()
+
+    for keyword in responses:
+        if re.search(keyword, user_input):
+            return responses[keyword]
+        return responses[default]
+    
