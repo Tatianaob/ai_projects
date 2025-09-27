@@ -3,17 +3,17 @@ import re
 
 # a dict that maps keywords to predefined responses
 responses = {
-    "Hello": "Hi there, how can I assist you today?" ,
+    "hello": "Hi there, how can I assist you today?" ,
     "Hola": "Hola como estas? En que puedo aydudarte?",
     "How are you?": "I am just a bot. But I am good, thanks",
     "What is your name?": "My name is chatbot",
     "Help": "Sure, how can I help?",
     "Bye": "Chao! Have a great day",
     "Thank you": "You are welcome!",
-    "default": " I am not sure I understand, please rephrase"
+    "default": " I am not sure I understand, please rephrase",
 }
-# Function to find the appropriate response based on the user's input
 
+# Function to find the appropriate response based on the user's input
 def chatbot_response(user_input):
     # convert user input to lowercasse to match case-sensitive
     user_input = user_input.lower()
@@ -21,7 +21,7 @@ def chatbot_response(user_input):
     for keyword in responses:
         if re.search(keyword, user_input):
             return responses[keyword]
-        return responses[default]
+    return responses["default"]
     
 # main function to rrun the chatbo
 def chatbot():
@@ -35,3 +35,11 @@ def chatbot():
         if user_input.lower() == 'bye':
             print("Chatbot: Goodbye! Have a nice day")
             break
+        # get chatbot response based on user input:
+        response = chatbot_response(user_input)
+
+        #print chatbot's response:
+        print(f"Chatbot: {response}")
+
+#run the chatbot:
+chatbot()
