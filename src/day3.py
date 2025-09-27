@@ -23,3 +23,15 @@ def chatbot_response(user_input):
             return responses[keyword]
         return responses[default]
     
+# main function to rrun the chatbo
+def chatbot():
+    print("Hello, I am here to assist you. - Type 'bye' to exit ")
+
+    while True:
+        # get user input
+        user_input = input("You: ")
+
+        #if user types 'bye' exit loop:
+        if user_input.lower() == 'bye':
+            print("Chatbot: Goodbye! Have a nice day")
+            break
